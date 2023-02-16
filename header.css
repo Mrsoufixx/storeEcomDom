@@ -1,0 +1,10 @@
+header{
+    display: flex;
+    justify-content: flex-end;
+    backdrop-filter: blur(100px);
+    background-color: transparent;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+

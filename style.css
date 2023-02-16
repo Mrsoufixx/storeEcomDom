@@ -1,0 +1,28 @@
+@import url(/header.css);
+
+body{
+    margin: auto;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* width: 100%; */
+}
+#moteur{
+    display: flex;
+    flex-direction: column;
+}
+
+/*caroussel*/ 
+.caroussel button{
+    position: absolute;
+    left:18em;
+    top: 27em;
+    padding: 6px 15px;
+}
+.caroussel h1{
+    position: absolute;
+    left:2em;
+    top:4em;
+    font-size: 4em;
+    margin: 0%;
+}
