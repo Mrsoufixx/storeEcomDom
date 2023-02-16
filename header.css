@@ -1,10 +1,19 @@
 header{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     backdrop-filter: blur(100px);
     background-color: transparent;
     position: fixed;
     z-index: 1;
     width: 100%;
+    
+}
+header nav{
+    display:flex;
+    justify-content: flex-end;
+    width: 80%;
+}
+nav ul{
+    padding: 1px;
 }
 

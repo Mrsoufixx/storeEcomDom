@@ -21,21 +21,17 @@ let aTagHeader={
     style : "text-decoration: none; color: black; float: right;",
     
 }
-let ulNav={
-    style : "padding:2px;"
-}
 let liNav={
-    style : "display:inline-block; list-stye=none; padding:4px;"
+    style : "display:inline-block; list-stye=none; padding:4px 25px;"
 }
 
 //caroussel style
 let carousel_Section={
-    style: "display:flex; justify-content:flex-end;position:relative",
     class: "caroussel"
 
 }
 let imgCaroussel={
-    style : " max-width: 600px; width:600px;filter: drop-shadow(33px 6px 10px gray);",
+    style : " max-width: 125%;width:100%;filter: drop-shadow(33px 6px 10px gray);position:absolute; right:-40px; tarnsition: width 0.5s;",
     src : "/spaderi1.png"
 }
 
@@ -46,11 +42,11 @@ let moteur = document.querySelector('#moteur')
 let header = document.createElement('header')
 moteur.appendChild(header)
 
+let nav = document.createElement('nav')
+header.appendChild(nav)
 let headerUl = document.createElement('ul')
-header.appendChild(headerUl)
-Object.keys(ulNav).forEach(attribute=>{
-    headerUl.setAttribute(attribute,ulNav[attribute])
-})
+nav.appendChild(headerUl)
+
 
 
 Object.keys(menu).map((elt,index)=>{
@@ -74,6 +70,8 @@ Object.keys(menu).map((elt,index)=>{
 //Carousel
 //variable Carousel
 let carouselSection = document.createElement('section')
+let carouselDivImg = document.createElement('div')
+let carouselDivDescription = document.createElement('div')
 let carouselImg = document.createElement('img')
 let carouselText = document.createElement('h1')
 let carouselBtn = document.createElement('button')
@@ -81,9 +79,11 @@ let carouselBtn = document.createElement('button')
 
 //appendChild Caroussel 
 moteur.appendChild(carouselSection)
-carouselSection.append(carouselImg,carouselText,carouselBtn)
+carouselSection.append(carouselDivDescription,carouselDivImg)
+carouselDivImg.appendChild(carouselImg)
+carouselDivDescription.append(carouselText,carouselBtn)
 carouselText.innerHTML="New arrival"
-carouselBtn.innerHTML="Voir detail"
+carouselBtn.innerHTML="Voir plus"
 
 
 
@@ -96,5 +96,7 @@ Object.keys(imgCaroussel).forEach(attribute =>{
     carouselImg.setAttribute(attribute,imgCaroussel[attribute])
 })
 
+carouselDivImg.classList.add("carouselDivImg")
+carouselDivDescription.classList.add("carouselDivDescription")
 //
 
