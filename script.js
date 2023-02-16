@@ -62,7 +62,7 @@ Object.keys(menu).map((elt,index)=>{
     Object.keys(aTagHeader).forEach(attribute =>{
         headerA.setAttribute(attribute,aTagHeader[attribute])
     })
-    headerA.setAttribute("key",index)
+    // headerA.setAttribute("key",index)
     headerA.setAttribute("href",elt[index])
 
 })
